@@ -3,8 +3,11 @@ import connectDB from "@/lib/db";
 import AdminUser from "@/models/AdminUser";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
+import { sendLoginAlertEmail } from "@/lib/email"; // <-- Imported the email utility
 
 const JWT_SECRET = process.env.JWT_SECRET;
+const EMAIL_USER = process.env.EMAIL_USER;
+const EMAIL_PASS = process.env.EMAIL_PASS;
 
 export async function POST(req) {
     try {
@@ -44,6 +47,11 @@ export async function POST(req) {
             JWT_SECRET,
             { expiresIn: "8h" }
         );
+
+        // 4. Send Login Alert Email (Do not await so it runs non-blocking in background)
+        const ipAddress = req.headers.get("x-forwarded-for") || req.ip || "Unknown IP";
+        const userAgent = req.headers.get("user-agent") || "Unknown Device";
+        sendLoginAlertEmail(user.email, EMAIL_USER, EMAIL_PASS, ipAddress, userAgent);
 
         return NextResponse.json(
             {

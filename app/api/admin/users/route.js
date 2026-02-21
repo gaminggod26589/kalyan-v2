@@ -82,7 +82,7 @@ export async function POST(req) {
             {
                 success: true,
                 message: "User created successfully",
-                data: { id: newUser._id, name: newUser.name, email: newUser.email, role: newUser.role }
+                data: { _id: newUser._id, name: newUser.name, email: newUser.email, role: newUser.role }
             },
             { status: 201 }
         );

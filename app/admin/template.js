@@ -40,13 +40,14 @@ function AdminLayoutInner({ children }) {
         { name: "Dashboard", href: "/admin/dashboard", icon: "📊" },
         { name: "Appointments", href: "/admin/appointments", icon: "📅" },
         { name: "Messages", href: "/admin/messages", icon: "📬" },
+        { name: "My Account", href: "/admin/account", icon: "👤" },
     ];
 
     if (isOwner) {
         navLinks.push({ name: "Staff Users", href: "/admin/users", icon: "👥" });
     }
 
-    const SidebarContent = () => (
+    const sidebarContent = (
         <>
             <div className="p-6 border-b border-gray-200">
                 <h2 className="text-xl font-serif font-bold text-teal-900">Kalyan Admin</h2>
@@ -88,7 +89,7 @@ function AdminLayoutInner({ children }) {
         <div className="flex min-h-screen bg-gray-100 font-sans">
             {/* Desktop Sidebar */}
             <aside className="w-64 bg-white border-r border-gray-200 hidden md:flex md:flex-col shadow-sm">
-                <SidebarContent />
+                {sidebarContent}
             </aside>
 
             {/* Main Content Area */}
@@ -146,7 +147,7 @@ function AdminLayoutInner({ children }) {
                                         </svg>
                                     </button>
                                 </div>
-                                <SidebarContent />
+                                {sidebarContent}
                             </motion.aside>
                         </>
                     )}
