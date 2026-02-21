@@ -84,18 +84,12 @@ export default function AppointmentsPage() {
         setStatus("loading");
 
         try {
-            // POST to backend API
-            // Change this URL to your deployed backend URL in production
-            const res = await fetch(
-                process.env.NEXT_PUBLIC_API_URL
-                    ? `${process.env.NEXT_PUBLIC_API_URL}/api/appointments`
-                    : "http://localhost:5000/api/appointments",
-                {
-                    method: "POST",
-                    headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify(form),
-                }
-            );
+            // POST to Next.js API Route
+            const res = await fetch("/api/appointments", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(form),
+            });
 
             if (res.ok) {
                 setStatus("success");
