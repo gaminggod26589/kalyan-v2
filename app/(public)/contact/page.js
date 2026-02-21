@@ -22,7 +22,7 @@ const CONTACT_INFO = [
             </svg>
         ),
         label: "Our Location",
-        value: "Near Railway Station, Kalyan West, Thane – 421301, Maharashtra",
+        value: "Makalu Television, Dharan Rd, Biratnagar",
         link: "https://maps.app.goo.gl/sQ7bW2twXLeaQ24z5",
         linkLabel: "Get Directions",
         color: "#0d7377",
@@ -189,7 +189,7 @@ export default function ContactPage() {
                   Go to maps.google.com → search your address → Share → Embed a map → Copy HTML → extract the src URL.
                 */}
                                 <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7535450.68810892!2d74.8256456!3d22.7498162!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ef7500324f62ab%3A0x3e066bbf9c3e5577!2sKalyan%20physiotherapy%20clinic!5e0!3m2!1sen!2snp!4v1771660902652!5m2!1sen!2snp"
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3569.0428866429916!2d87.28382442346915!3d26.1637800!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f17!3m3!1m2!1s0x39ef60b72f5b5555%3A0x1d0e3f8c0b0e0e0e!2sMakalu%20Television%20Dharan%20Rd%20Biratnagar!5e0!3m2!1sen!2snp!4v1234567890"
                                     width="100%"
                                     height="100%"
                                     style={{ border: 0, minHeight: "360px" }}
@@ -246,7 +246,7 @@ export default function ContactPage() {
                                                     value={form.name}
                                                     onChange={handleChange}
                                                     required
-                                                    placeholder="Rajesh Kumar"
+                                                    placeholder="John Doe"
                                                     className="form-input"
                                                 />
                                             </div>
@@ -259,7 +259,7 @@ export default function ContactPage() {
                                                     name="phone"
                                                     value={form.phone}
                                                     onChange={handleChange}
-                                                    placeholder="+91 98765 43210"
+                                                    placeholder="+977 98XXXXXXXXX"
                                                     className="form-input"
                                                 />
                                             </div>

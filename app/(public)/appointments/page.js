@@ -203,7 +203,7 @@ export default function AppointmentsPage() {
                                                     name="name"
                                                     value={form.name}
                                                     onChange={handleChange}
-                                                    placeholder="e.g. Rajesh Kumar"
+                                                    placeholder="e.g. Jhone deo"
                                                     className={`form-input ${errors.name ? "border-red-400 focus:border-red-400" : ""}`}
                                                 />
                                                 {errors.name && <p className="text-red-500 text-xs mt-1.5">{errors.name}</p>}
@@ -217,7 +217,7 @@ export default function AppointmentsPage() {
                                                     name="phone"
                                                     value={form.phone}
                                                     onChange={handleChange}
-                                                    placeholder="+91 98765 43210"
+                                                    placeholder="+977 9881454846"
                                                     className={`form-input ${errors.phone ? "border-red-400 focus:border-red-400" : ""}`}
                                                 />
                                                 {errors.phone && <p className="text-red-500 text-xs mt-1.5">{errors.phone}</p>}
@@ -385,8 +385,8 @@ export default function AppointmentsPage() {
                                 <p className="text-white/75 text-sm mb-4">
                                     Speak directly with our reception team to book or check availability.
                                 </p>
-                                <a href="tel:+912512345678" className="btn-outline block text-center text-sm py-3">
-                                    +91 251 234 5678
+                                <a href="tel:+977 98XXXXXXXXX" className="btn-outline block text-center text-sm py-3">
+                                    +977 98XXXXXXXXX
                                 </a>
                             </div>
 
