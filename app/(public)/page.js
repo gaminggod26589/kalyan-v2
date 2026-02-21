@@ -549,7 +549,7 @@ export default function HomePage() {
                   Book Free Assessment
                 </Link>
                 <Link href="/contact" className="btn-outline text-base px-8 py-4">
-                  Call Us: +91 251 234 5678
+                  Call Us: +977 98xxxxxxxxx
                 </Link>
               </div>
             </div>

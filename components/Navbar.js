@@ -48,8 +48,8 @@ export default function Navbar() {
         <>
             <header
                 className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
-                        ? "bg-white/95 backdrop-blur-md shadow-md py-3"
-                        : "bg-transparent py-5"
+                    ? "bg-white/95 backdrop-blur-md shadow-md py-3"
+                    : "bg-transparent py-5"
                     }`}
             >
                 <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
@@ -88,12 +88,12 @@ export default function Navbar() {
                                 key={link.href}
                                 href={link.href}
                                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${isActive(link.href)
-                                        ? scrolled
-                                            ? "text-[#0d7377] bg-[#0d7377]/10 font-semibold"
-                                            : "text-white bg-white/20 font-semibold"
-                                        : scrolled
-                                            ? "text-[#1a2e35] hover:text-[#0d7377] hover:bg-[#0d7377]/08"
-                                            : "text-white/85 hover:text-white hover:bg-white/15"
+                                    ? scrolled
+                                        ? "text-[#0d7377] bg-[#0d7377]/10 font-semibold"
+                                        : "text-white bg-white/20 font-semibold"
+                                    : scrolled
+                                        ? "text-[#1a2e35] hover:text-[#0d7377] hover:bg-[#0d7377]/08"
+                                        : "text-white/85 hover:text-white hover:bg-white/15"
                                     }`}
                             >
                                 {link.label}
@@ -195,8 +195,8 @@ export default function Navbar() {
                                         <Link
                                             href={link.href}
                                             className={`flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium transition-colors ${isActive(link.href)
-                                                    ? "text-[#0d7377] bg-[#0d7377]/10 font-semibold"
-                                                    : "text-[#1a2e35] hover:text-[#0d7377] hover:bg-gray-50"
+                                                ? "text-[#0d7377] bg-[#0d7377]/10 font-semibold"
+                                                : "text-[#1a2e35] hover:text-[#0d7377] hover:bg-gray-50"
                                                 }`}
                                         >
                                             {link.label}

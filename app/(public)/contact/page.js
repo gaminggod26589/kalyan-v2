@@ -23,7 +23,7 @@ const CONTACT_INFO = [
         ),
         label: "Our Location",
         value: "Near Railway Station, Kalyan West, Thane – 421301, Maharashtra",
-        link: "https://maps.google.com",
+        link: "https://maps.app.goo.gl/sQ7bW2twXLeaQ24z5",
         linkLabel: "Get Directions",
         color: "#0d7377",
     },
@@ -34,8 +34,8 @@ const CONTACT_INFO = [
             </svg>
         ),
         label: "Phone Number",
-        value: "+91 251 234 5678",
-        link: "tel:+912512345678",
+        value: "+977 98XXXXXXXX",
+        link: "tel:+97798XXXXXXXX",
         linkLabel: "Call Now",
         color: "#085f63",
     },
@@ -189,7 +189,7 @@ export default function ContactPage() {
                   Go to maps.google.com → search your address → Share → Embed a map → Copy HTML → extract the src URL.
                 */}
                                 <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3767.4!2d73.1292!3d19.2403!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7959b4e5df23d%3A0x34b!2sKalyan+West%2C+Maharashtra!5e0!3m2!1sen!2sin!4v1708000000000!5m2!1sen!2sin"
+                                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7535450.68810892!2d74.8256456!3d22.7498162!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ef7500324f62ab%3A0x3e066bbf9c3e5577!2sKalyan%20physiotherapy%20clinic!5e0!3m2!1sen!2snp!4v1771660902652!5m2!1sen!2snp"
                                     width="100%"
                                     height="100%"
                                     style={{ border: 0, minHeight: "360px" }}
