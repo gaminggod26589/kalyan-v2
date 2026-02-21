@@ -1,26 +1,189 @@
+/* =============================================
+   KALYAN PHYSIOTHERAPY — GLOBAL STYLES
+   Tailwind v4 CSS-based config
+   ============================================= */
+
 @import "tailwindcss";
 
+/* ---------- Design Tokens ---------- */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+    /* Primary brand color — deep teal */
+    --color-primary: #0d7377;
+    --color-primary-dark: #085f63;
+    --color-primary-light: #14a8ae;
+
+    /* Accent — warm gold */
+    --color-accent: #e3a832;
+    --color-accent-dark: #c08a1e;
+
+    /* Neutrals */
+    --color-bg: #f7fafa;
+    --color-surface: #ffffff;
+    --color-text: #1a2e35;
+    --color-text-muted: #5a7375;
+    --color-border: #dde8e8;
+
+    /* Shadows */
+    --shadow-sm: 0 1px 4px rgba(13, 115, 119, 0.08);
+    --shadow-md: 0 4px 20px rgba(13, 115, 119, 0.12);
+    --shadow-lg: 0 8px 40px rgba(13, 115, 119, 0.18);
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, #0d7377 0%, #085f63 50%, #043f42 100%);
+    --gradient-soft: linear-gradient(180deg, #f7fafa 0%, #e8f4f5 100%);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* ---------- Base Reset ---------- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-inter), system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* ---------- Custom Tailwind Theme Overrides ---------- */
+@theme inline {
+    --color-primary: #0d7377;
+    --color-primary-dark: #085f63;
+    --color-primary-light: #14a8ae;
+    --color-accent: #e3a832;
+    --color-bg: #f7fafa;
+    --color-surface: #ffffff;
+    --color-muted: #5a7375;
+    --font-sans: var(--font-inter), system-ui, sans-serif;
+    --font-display: var(--font-playfair), Georgia, serif;
+}
+
+/* ---------- Selection Color ---------- */
+::selection {
+    background: #0d737733;
+    color: var(--color-primary-dark);
+}
+
+/* ---------- Scrollbar (thin, branded) ---------- */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #e8f4f5;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-primary);
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-primary-dark);
+}
+
+/* ---------- Utility Classes ---------- */
+
+/* Glass card effect */
+.glass-card {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(13, 115, 119, 0.12);
+    box-shadow: var(--shadow-md);
+}
+
+/* Gradient text */
+.gradient-text {
+    background: linear-gradient(135deg, #0d7377, #e3a832);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Section padding */
+.section-pad {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+/* Primary button */
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 2rem;
+    background: var(--color-primary);
+    color: white;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 14px rgba(13, 115, 119, 0.35);
+}
+
+.btn-primary:hover {
+    background: var(--color-primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(13, 115, 119, 0.45);
+}
+
+/* Outline button */
+.btn-outline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 2rem;
+    background: transparent;
+    color: white;
+    font-weight: 600;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    border-radius: 0.5rem;
+    transition: all 0.25s ease;
+}
+
+.btn-outline:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: white;
+    transform: translateY(-2px);
+}
+
+/* Input fields */
+.form-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1.5px solid var(--color-border);
+    border-radius: 0.5rem;
+    font-size: 0.95rem;
+    background: white;
+    color: var(--color-text);
+    transition: border-color 0.2s, box-shadow 0.2s;
+    outline: none;
+}
+
+.form-input:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(13, 115, 119, 0.12);
+}
+
+/* Section labels */
+.section-label {
+    display: inline-block;
+    padding: 0.35rem 1rem;
+    background: rgba(13, 115, 119, 0.1);
+    color: var(--color-primary);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    border-radius: 2rem;
+    margin-bottom: 1rem;
 }
